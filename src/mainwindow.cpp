@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "LoginView.h"
 #include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent, const std::string &title) : QMainWindow(parent) {
@@ -15,16 +16,8 @@ MainWindow::MainWindow(QWidget *parent, const std::string &title) : QMainWindow(
     this->stackedLayout = new QStackedLayout();
     this->mainLayout->addLayout(this->stackedLayout);
     
-    // Hard coded example of starting widget
-    // TODO: Replace by setting up the initial widget based on the application state
-
-    QWidget *homeScreen = new QWidget();
-    QVBoxLayout *homeLayout = new QVBoxLayout(homeScreen);
-    QLabel *homeLabel = new QLabel("Welcome to the Home Screen!");
-    homeLabel->setAlignment(Qt::AlignCenter); 
-    homeLayout->addWidget(homeLabel);
-
-    this->stackedLayout->addWidget(homeScreen);
+    LoginView *loginView = new LoginView(this);
+    this->stackedLayout->addWidget(loginView);
 }
 
 // No destructor set

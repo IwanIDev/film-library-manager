@@ -16,7 +16,10 @@ find_package(unofficial-sqlite3 CONFIG REQUIRED)
 set(PROJECT_SOURCES
   src/main.cpp
   src/mainwindow.cpp
+  src/LoginView.cpp
+  src/loginview.ui
   include/mainwindow.h
+  include/LoginView.h
 )
 
 add_executable(FilmLibraryManager
