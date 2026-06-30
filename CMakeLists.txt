@@ -10,6 +10,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(cryptopp CONFIG REQUIRED)
 
 set(PROJECT_SOURCES
   src/main.cpp
@@ -23,4 +24,4 @@ add_executable(FilmLibraryManager
 
 target_include_directories(FilmLibraryManager PRIVATE include)
 
-target_link_libraries(FilmLibraryManager PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
+target_link_libraries(FilmLibraryManager PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets cryptopp::cryptopp)

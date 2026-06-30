@@ -1,0 +1,8 @@
+{
+  "name": "film-library-app",
+  "version-string": "0.1.0",
+  "dependencies": [
+      "cryptopp"
+  ]
+}
+
