@@ -16,7 +16,7 @@ set(PROJECT_SOURCES
   include/mainwindow.h
 )
 
-add_executable(TestQt6App
+add_executable(FilmLibraryManager
   ${PROJECT_SOURCES}
 )
 

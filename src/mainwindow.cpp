@@ -1,8 +1,8 @@
 #include "mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-  resize(800, 600);
-  setWindowTitle("Test Qt 6 Application");
+MainWindow::MainWindow(QWidget *parent, const std::string &title) : QMainWindow(parent) {
+    resize(800, 600);
+    setWindowTitle(title.c_str());
 }
 
 // No destructor set
