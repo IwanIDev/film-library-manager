@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <qtmetamacros.h>
+#include <QVBoxLayout>
+#include <QStackedLayout>
 #include <string>
 
 /*
@@ -23,6 +25,10 @@ class MainWindow : public QMainWindow {
          * Destructor for the MainWindow class.
          */
         ~MainWindow();
+
+    private:
+        QVBoxLayout *mainLayout; // Window layout
+        QStackedLayout *stackedLayout; // Stacked layout for switching between different views
 };
 
 #endif // MAINWINDOW_H
